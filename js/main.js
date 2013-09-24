@@ -17,7 +17,7 @@ if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 			$("header").removeClass("shrink");
 		}
 	}
-} else {
+} else if( navigator.userAgent.match(/(iPad)/)) {
 	document.ontouchmove = function() {
 		n = Math.ceil($(window).scrollTop() / 2.5),
 		contentTop = $(window).width() < 480 ? 150 : 360;
