@@ -111,7 +111,9 @@ window.onscroll = function() {
 }
 
 function parseTwitterDate(text) {
-	return new Date(Date.parse(text.replace(/( +)/, ' UTC$1')));
+	//IE doesn't like twitter's created_at date format, need to move a few things around
+	var date = text.split(" ");
+	return new Date(date[0] + " " + date[1] + " " + date[2] + " " + date[5] + " " + date[3] + " " + date[4]);
 }
 
 String.prototype.parseURL = function() {
