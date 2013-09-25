@@ -13,7 +13,7 @@ $(function() {
 		preloader: false,
 		focus: '#name',
 		mainClass:"mfp-zoom-in",
-
+		removalDelay: 300,
 		// When elemened is focused, some mobile browsers in some cases zoom in
 		// It looks not nice, so we disable it:
 		callbacks: {
