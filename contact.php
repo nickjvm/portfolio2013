@@ -47,7 +47,7 @@ if(count($errors) > 0) {
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$headers .= 'From: '.$name.' <noreply@nickvanmeter.com>' . "\r\n";
-		$headers .= 'Reply-To: '.$email. "\r\n" .
+		$headers .= 'Reply-To: '.$email. "\r\n";
 
 		if(mail($to, $subject, $msg, $headers)) {
 			print_r(json_encode(array("status"=>true)));
