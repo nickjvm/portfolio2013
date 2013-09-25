@@ -261,6 +261,9 @@ section {
   margin: auto;
   position: relative;
 }
+body > section {
+  padding: 0 20px;
+}
 header {
   background: #666;
   overflow: hidden;
@@ -273,6 +276,8 @@ header {
   z-index: 103;
   box-shadow: 0 1px 4px 0 #000;
   -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
 }
 header #logo {
   text-indent: -999em;
@@ -290,8 +295,12 @@ header nav {
   line-height: 34px;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   text-align: center;
   -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
 }
 header nav ul {
   margin: 0;
@@ -307,6 +316,8 @@ header nav li:after {
   top: 0;
   bottom: 0;
   -webkit-transform: skew(-20deg, 0);
+  -moz-transform: skew(-20deg, 0);
+  transform: skew(-20deg, 0);
   border: 2px solid rgba(255, 255, 255, 0.55);
   border-width: 0 2px 0 0;
   right: 0;
@@ -335,6 +346,8 @@ header + section {
   position: fixed;
   font-family: league_gothic;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   font-weight: normal;
   font-size: 30px;
   overflow: hidden;
@@ -342,6 +355,8 @@ header + section {
   right: 0;
   top: 130px;
   -webkit-transition: top .2s, height .2s;
+  -moz-transition: top .2s, height .2s;
+  transition: top .2s, height .2s;
 }
 #hero:after {
   position: absolute;
@@ -353,6 +368,8 @@ header + section {
   content: "";
   bottom: 0px;
   -webkit-transform: skew(-22deg, 0);
+  -moz-transform: skew(-22deg, 0);
+  transform: skew(-22deg, 0);
 }
 #hero h2 {
   font-size: inherit;
@@ -392,6 +409,8 @@ header + section {
   z-index: 102;
   background: #E7E7E7;
   -webkit-transition: margin .2s;
+  -moz-transition: margin .2s;
+  transition: margin .2s;
 }
 #contentWrapper #content {
   margin: auto;
@@ -408,6 +427,8 @@ header + section {
   text-transform: uppercase;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 #contentWrapper aside h3 {
   margin-top: 0;
@@ -479,7 +500,9 @@ footer ul li:first-child {
   display: block;
   font-family: league_gothic;
   color: #666;
-  -webkit-font-smoothing: :antialised;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   font-size: 35px;
   text-transform: uppercase;
   vertical-align: middle;
@@ -515,13 +538,115 @@ footer #twitter:after {
   border: 16px solid rgba(0, 0, 0, 0);
   border-bottom-color: #666;
   content: "";
-  z-index: -1;
+  z-index: 1;
   left: 38%;
   top: -31px;
   border-radius: 4px;
 }
-body > section {
-  padding: 0 20px;
+#success {
+  position: fixed;
+  z-index: 103;
+  left: 0;
+  right: 0;
+  top: -40px;
+  padding: .5em;
+  background: #C7E7C1;
+  z-index: 104;
+  text-align: center;
+  color: #496345;
+  border-bottom: 1px solid #496345;
+  -webkit-transition: top 1s;
+  -moz-transition: top 1s;
+  transition: top 1s;
+}
+form #curtain {
+  background: rgba(255, 255, 255, 0.5) url(../img/loading.gif) center center no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+form.thinking #curtain {
+  display: block;
+}
+form ul {
+  font-size: 13px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+form ul li {
+  padding: 5px 0;
+}
+form label {
+  display: block;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #AAAAAA;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form input[type=text].error,
+form input[type=email].error,
+form textarea.error {
+  border: 2px solid #CC6060;
+}
+form .alert:not(:empty).alert-error {
+  color: #CC6060;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+form textarea {
+  height: 100px;
+}
+form h2 {
+  font-family: league_gothic;
+  text-transform: uppercase;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 0 .5em 0;
+}
+form #buttons {
+  text-align: right;
+}
+form #buttons li {
+  display: inline-block;
+}
+form #buttons a {
+  display: inline-block;
+  padding: 10px 20px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #666;
+}
+form #buttons button[type=submit] {
+  background: #A7D172;
+  padding: 10px 25px;
+  vertical-align: middle;
+  border: 0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  border: 1px solid #9AC06B;
+  border-radius: 3px;
+}
+.white-popup-block {
+  background: #FFF;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 400px;
+  margin: 40px auto;
+  position: relative;
 }
 @media (min-width: 480px) {
   header nav li a {
@@ -543,6 +668,8 @@ body > section {
     left: 255px;
     top: -55px;
     -webkit-animation-name: rollin_small;
+    -moz-animation-name: rollin_small;
+    animation-name: rollin_small;
   }
   #hero ul li {
     line-height: 40px;
@@ -555,6 +682,7 @@ body > section {
   }
   footer {
     height: 162px;
+    background: #E7E7E7;
   }
   footer ul li:first-child {
     display: inline-block;
@@ -572,6 +700,8 @@ body > section {
     display: inline-block;
     margin: 1em 0 1em 20px;
     -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
   }
   header nav {
     float: right;
@@ -606,6 +736,16 @@ body > section {
   #contentWrapper #intro p:first-child {
     margin-top: 0;
   }
+  #contact label {
+    display: inline-block;
+    width: 30%;
+  }
+  #contact input[type=text],
+  #contact input[type=email],
+  #contact textarea {
+    width: 70%;
+    display: inline-block;
+  }
 }
 @media (min-width: 665px) {
   #hero {
@@ -629,6 +769,8 @@ body > section {
     left: 375px;
     margin-left: 50px;
     -webkit-animation-name: rollin_full;
+    -moz-animation-name: rollin_full;
+    animation-name: rollin_full;
   }
   #hero aside ul {
     margin: 0;
@@ -707,6 +849,72 @@ body > section {
   }
 }
 @-webkit-keyframes rollin_full {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -24px;
+  }
+  100% {
+    top: -44px;
+  }
+}
+@-moz-keyframes rollin_micro {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -50px;
+  }
+  100% {
+    top: -60px;
+  }
+}
+@-moz-keyframes rollin_small {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -35px;
+  }
+  100% {
+    top: -55px;
+  }
+}
+@-moz-keyframes rollin_full {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -24px;
+  }
+  100% {
+    top: -44px;
+  }
+}
+@keyframes rollin_micro {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -50px;
+  }
+  100% {
+    top: -60px;
+  }
+}
+@keyframes rollin_small {
+  0% {
+    top: -545px;
+  }
+  70% {
+    top: -35px;
+  }
+  100% {
+    top: -55px;
+  }
+}
+@keyframes rollin_full {
   0% {
     top: -545px;
   }

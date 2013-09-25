@@ -14,10 +14,12 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+        <div id="success"><strong>Your message has been sent!</strong></div>
         <div id="container">
             <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -85,17 +87,35 @@
                     <li><a href="https://facebook.com/nick.vanmeter" target="_blank"><i class="icon-facebook"></a></i></li>
                     <li><a href="https://twitter.com/nickjvm" target="_blank"><i class="icon-twitter"></a></i></li>
                     <li><a href="http://www.linkedin.com/in/nickvanmeter" target="_blank"><i class="icon-linkedin"></a></i></li>
-                    <li><a id="email"><i class="icon-envelope"></i></a></li>
+                    <li><a id="email" href="#contact"><i class="icon-envelope"></i></a></li>
                 </ul>
                 <div id="twitter">
                     <span class="tweet">@nickjvm: Cras vitae posuere diam. Aenean fermentum mi a ligula porta porta. Nullam viverra sed nunc quis hendrerit.</span>
                 </div>
             </footer>
         </div>
+        <form id="contact" method="post" class="white-popup-block mfp-hide">
+            <div id="curtain"></div>
+            <h2>Give me a shout!</h2>
+            <span class="alert alert-error"></span>
+            <ul>
+                <li><label for="name">Name</label><input required name="name" id="name" type="text" placeholder="Name"/></li>
+                <li><label for="email">Email</label><input required name="email" id="email" type="email" placeholder="Email"/></li>
+                <li><label for="message">Message</label><textarea required name="message" id="message" placeholder="What's up?"></textarea></li>
+                <li>
+                    <ul id="buttons">
+                        <li><a href="#" class="cancel">cancel</a></li>
+                        <li><button type="submit">Send!</button><li>
+                    </ul>
+                </li>
+            </ul>
+        </form>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/moment.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
