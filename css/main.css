@@ -935,5 +935,6 @@ form #buttons button[type=submit] {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   header #logo {
     background-image: url('../img/logo@2x.png');
+    background-size: 179px 41px;
   }
 }
