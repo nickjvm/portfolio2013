@@ -328,6 +328,7 @@ section {
     margin:auto;
     position:relative;
 }
+
 header {
     background:#666;
     overflow:hidden;
@@ -508,15 +509,18 @@ footer {
             &:not(:first-child) {
                 display:inline-block;
                 vertical-align:middle;
-
-                display:inline-block;
-                background:#A7D172;
-                border-radius:60px;
-                padding:35px;
-                position:relative;
-                width:0;
-                height:0;
-                overflow:hidden;
+                a {
+                    background:#A7D172;
+                    border-radius:60px;
+                    padding:35px;
+                    position:relative;
+                    width:0;
+                    height:0;
+                    overflow:hidden;
+                    line-height:0;
+                    display:inline-block;
+                    text-decoration:none;
+                }
                 i {
                     vertical-align: middle;
                     color:#FFF;
@@ -541,6 +545,11 @@ footer {
                     }
                 }
             }
+            &:hover {
+                a {
+                    background:#9AC06B;
+                }
+            }
             &:first-child {
                 display:block;
                 font-family:league_gothic;
@@ -560,12 +569,21 @@ footer {
         color: #E7E7E7;
         padding: 1em;
         position: relative;
+        display:none;
         .tweet {
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             width:100%;
             display:inline-block;
+            a {
+                font-weight:bold;
+                color:#E7E7E7;
+                text-decoration:none;
+                &:hover {
+                    text-decoration:underline;
+                }
+            }
         }
         &:after {
             position: absolute;
@@ -808,5 +826,13 @@ body > section {
     0% {top:-545px;}
     70% {top:-24px;}
     100% {top:-44px;}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        #logo {
+            background-image:url('../img/logo@2x.png') center center no-repeat;
+        }
+    }
 }
 

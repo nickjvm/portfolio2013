@@ -434,8 +434,10 @@ footer ul {
   margin-bottom: 2em;
 }
 footer ul li:not(:first-child) {
-  vertical-align: middle;
   display: inline-block;
+  vertical-align: middle;
+}
+footer ul li:not(:first-child) a {
   background: #A7D172;
   border-radius: 60px;
   padding: 35px;
@@ -443,6 +445,9 @@ footer ul li:not(:first-child) {
   width: 0;
   height: 0;
   overflow: hidden;
+  line-height: 0;
+  display: inline-block;
+  text-decoration: none;
 }
 footer ul li:not(:first-child) i {
   vertical-align: middle;
@@ -467,6 +472,9 @@ footer ul li:not(:first-child) i.icon-envelope {
   left: 31px;
   top: 33px;
 }
+footer ul li:hover a {
+  background: #9AC06B;
+}
 footer ul li:first-child {
   display: block;
   font-family: league_gothic;
@@ -483,6 +491,7 @@ footer #twitter {
   color: #E7E7E7;
   padding: 1em;
   position: relative;
+  display: none;
 }
 footer #twitter .tweet {
   white-space: nowrap;
@@ -490,6 +499,14 @@ footer #twitter .tweet {
   overflow: hidden;
   width: 100%;
   display: inline-block;
+}
+footer #twitter .tweet a {
+  font-weight: bold;
+  color: #E7E7E7;
+  text-decoration: none;
+}
+footer #twitter .tweet a:hover {
+  text-decoration: underline;
 }
 footer #twitter:after {
   position: absolute;
@@ -698,5 +715,10 @@ body > section {
   }
   100% {
     top: -44px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  header #logo {
+    background-image: url('../img/logo@2x.png') center center no-repeat;
   }
 }
