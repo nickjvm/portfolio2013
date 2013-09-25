@@ -489,6 +489,9 @@ footer ul li:not(:first-child) a {
   display: inline-block;
   text-decoration: none;
 }
+footer ul li:not(:first-child) a:hover {
+  background: #9AC06B;
+}
 footer ul li:not(:first-child) i {
   vertical-align: middle;
   color: #FFF;
@@ -512,9 +515,6 @@ footer ul li:not(:first-child) i.icon-envelope {
   left: 31px;
   top: 33px;
 }
-footer ul li:hover a {
-  background: #9AC06B;
-}
 footer ul li:first-child {
   display: block;
   font-family: league_gothic;
@@ -534,19 +534,6 @@ footer #twitter {
   padding: 1em;
   position: relative;
   display: none;
-  /*&:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border: 16px solid rgba(0, 0, 0, 0);
-            border-bottom-color: #666;
-            content: "";
-            z-index: 1;
-            left: 38%;
-            top: -31px;
-            border-radius: 4px;
-        }*/
-
 }
 footer #twitter .tweet {
   white-space: nowrap;
@@ -706,9 +693,6 @@ form #buttons button[type=submit] {
   }
   footer ul li:first-child {
     display: inline-block;
-  }
-  footer #twitter:after {
-    left: 51%;
   }
 }
 @media (min-width: 585px) {
