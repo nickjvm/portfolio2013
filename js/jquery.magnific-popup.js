@@ -349,7 +349,7 @@ MagnificPopup.prototype = {
             if(mfp._hasScrollBar(windowHeight)){
                 var s = mfp._getScrollbarSize();
                 if(s) {
-                    windowStyles.paddingRight = s;
+                    //windowStyles.paddingRight = s;
                 }
             }
         }
