@@ -533,9 +533,9 @@ footer #twitter {
   color: #E7E7E7;
   padding: 1em;
   position: relative;
-  display: none;
 }
 footer #twitter .tweet {
+  display: none;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
