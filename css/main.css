@@ -433,6 +433,14 @@ header + section {
 #contentWrapper aside h3 {
   margin-top: 0;
 }
+#contentWrapper a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+}
+#contentWrapper a:hover {
+  text-decoration: underline;
+}
 #container {
   min-height: 100%;
   position: relative;

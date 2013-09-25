@@ -8,7 +8,7 @@ $(function() {
 	    $("#twitter").fadeIn();
 	});
 
-	$('#email').magnificPopup({
+	$('.email').magnificPopup({
 		type: 'inline',
 		preloader: false,
 		focus: '#name',
