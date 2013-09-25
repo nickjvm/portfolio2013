@@ -356,10 +356,10 @@ MagnificPopup.prototype = {
 
 		if(mfp.fixedContentPos) {
 			if(!mfp.isIE7) {
-				windowStyles.overflow = 'hidden';
+				//windowStyles.overflow = 'hidden';
 			} else {
 				// ie7 double-scroll bug
-				$('body, html').css('overflow', 'hidden');
+				//$('body, html').css('overflow', 'hidden');
 			}
 		}
 
