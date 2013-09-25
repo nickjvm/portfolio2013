@@ -34,13 +34,10 @@ if(count($errors) > 0) {
 					<head></head>
 					<body>
 					<ul style='list-style-type:none;padding:0;margin:0 0 1em 0;'>
-						<li><strong>From:</strong> {$name}</li>
-						<li><strong>Email:</strong> {$email}</li>
+						<li style='margin-left:0;'><strong>From:</strong> {$name}</li>
+						<li style='margin-left:0;'><strong>Email:</strong> {$email}</li>
 					</ul>
-					<p>
-						Details below:
-					</p>
-					<blockquote>
+					<blockquote style='margin-left:0;'>
 						{$message}
 					</blockquote>
 					</body>
