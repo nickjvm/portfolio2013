@@ -419,9 +419,10 @@ header + section {
   line-height: 1.6em;
   font-size: 13px;
 }
-#contentWrapper aside {
+#contentWrapper aside h3 {
+  margin-top: 0;
   font-family: league_gothic;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 1.5em;
   color: #666;
   text-transform: uppercase;
@@ -429,9 +430,6 @@ header + section {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
-}
-#contentWrapper aside h3 {
-  margin-top: 0;
 }
 #contentWrapper a {
   color: #666;
@@ -457,6 +455,7 @@ footer {
   right: 0;
   text-align: center;
   overflow: hidden;
+  background: #E7E7E7;
 }
 footer ul {
   padding: 0;
@@ -796,8 +795,8 @@ form #buttons button[type=submit] {
   #contentWrapper {
     margin-top: 470px;
   }
-  #contentWrapper aside {
-    font-size: 35px;
+  #contentWrapper aside h3 {
+    font-size: 40px;
   }
 }
 @media (min-width: 999px) {
@@ -933,8 +932,8 @@ form #buttons button[type=submit] {
     top: -44px;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   header #logo {
-    background-image: url('../img/logo@2x.png') center center no-repeat;
+    background-image: url('../img/logo@2x.png');
   }
 }

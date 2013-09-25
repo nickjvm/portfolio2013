@@ -494,17 +494,17 @@ header + section {
         font-size:13px;
     }
     aside {
-        font-family:league_gothic;
-        font-size:25px;
-        line-height:1.5em;
-        color:#666;
-        text-transform:uppercase;
-        font-weight:normal;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: antialiased;
-        font-smoothing: antialiased;
         h3 {
             margin-top:0;
+            font-family:league_gothic;
+            font-size:30px;
+            line-height:1.5em;
+            color:#666;
+            text-transform:uppercase;
+            font-weight:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            font-smoothing: antialiased;
         }
     }
     a {
@@ -532,6 +532,8 @@ footer {
     right:0;
     text-align:center;
     overflow:hidden;
+    background:#E7E7E7;
+
     ul {
         padding:0;
         margin-bottom: 2em;
@@ -915,7 +917,9 @@ form {
     #contentWrapper {
         margin-top:470px;
         aside {
-            font-size:35px;
+            h3 {
+                font-size:40px;
+            }
         }
     }
 
@@ -1021,10 +1025,10 @@ form {
     100% {top:-44px;}
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
     header {
         #logo {
-            background-image:url('../img/logo@2x.png') center center no-repeat;
+            background-image:url('../img/logo@2x.png');
         }
     }
 }

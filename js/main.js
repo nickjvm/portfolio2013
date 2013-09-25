@@ -91,33 +91,20 @@ $(function() {
 var clearForm = function(selector) {
 	$(selector).find(":input").val("").prop("checked",false);
 }
-if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-	window.onscroll = function() {
-		n = Math.ceil($(window).scrollTop() / 2.5),
-		contentTop = $(window).width() < 480 ? 150 : 360;
+
+var contentTop = $(window).width() < 480 ? 150 : 360;
+window.onscroll = function() {
+	if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+		var n = Math.ceil($(window).scrollTop() / 2.5);
 		$("#hero").css("-webkit-transform", "translateY(-" + n + "px)");
-		if($(window).scrollTop() > contentTop) {
-			$("header").addClass("shrink");
-		} else {
-			$("header").removeClass("shrink");
-		}
+	} 
+	if($(window).scrollTop() > contentTop) {
+		$("header").addClass("shrink");
+	} else {
+		$("header").removeClass("shrink");
 	}
-} else if( navigator.userAgent.match(/(iPad)/)) {
-	document.ontouchmove = function() {
-		n = Math.ceil($(window).scrollTop() / 2.5),
-		contentTop = $(window).width() < 480 ? 150 : 360;
-
-		$("#hero").css("-webkit-transform", "translateY(-" + n + "px)");
-		if($(window).scrollTop() > contentTop) {
-			$("header").addClass("shrink");
-		} else {
-			$("header").removeClass("shrink");
-		}
-	}
-
-
-
 }
+
 
 String.prototype.parseURL = function() {
 	return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
