@@ -12,6 +12,7 @@ $(function() {
 		type: 'inline',
 		preloader: false,
 		focus: '#name',
+		mainClass:"mfp-zoom-in",
 
 		// When elemened is focused, some mobile browsers in some cases zoom in
 		// It looks not nice, so we disable it:
