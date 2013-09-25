@@ -1,8 +1,8 @@
 $(function() {
 
 	$.getJSON('get-tweets.php',function(feeds) {
-
-	    var entry = "@nickjvm: " + feeds[0].text + " — " + moment(feeds[0].created_at).fromNow();
+	    var date = parseTwitterDate(feeds[0].created_at);
+	    var entry = "@nickjvm: " + feeds[0].text + " — " + moment(date).fromNow();
 
 	    $("#twitter .tweet").html(entry.parseURL().parseUsername().parseHashtag());
 	    $("#twitter").fadeIn();
@@ -110,6 +110,9 @@ window.onscroll = function() {
 	}
 }
 
+function parseTwitterDate(text) {
+	return new Date(Date.parse(text.replace(/( +)/, ' UTC$1')));
+}
 
 String.prototype.parseURL = function() {
 	return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
