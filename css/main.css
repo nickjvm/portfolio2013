@@ -461,6 +461,18 @@ footer ul {
   padding: 0;
   margin-bottom: 2em;
 }
+footer ul li:nth-child(3) {
+  position: relative;
+}
+footer ul li:nth-child(3):after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -35px;
+  border: 20px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #666;
+  margin-left: -20px;
+}
 footer ul li:not(:first-child) {
   display: inline-block;
   vertical-align: middle;
@@ -522,6 +534,19 @@ footer #twitter {
   padding: 1em;
   position: relative;
   display: none;
+  /*&:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 16px solid rgba(0, 0, 0, 0);
+            border-bottom-color: #666;
+            content: "";
+            z-index: 1;
+            left: 38%;
+            top: -31px;
+            border-radius: 4px;
+        }*/
+
 }
 footer #twitter .tweet {
   white-space: nowrap;
@@ -537,18 +562,6 @@ footer #twitter .tweet a {
 }
 footer #twitter .tweet a:hover {
   text-decoration: underline;
-}
-footer #twitter:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 16px solid rgba(0, 0, 0, 0);
-  border-bottom-color: #666;
-  content: "";
-  z-index: 1;
-  left: 38%;
-  top: -31px;
-  border-radius: 4px;
 }
 #success {
   position: fixed;
