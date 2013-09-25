@@ -33,9 +33,8 @@ if(count($errors) > 0) {
 					<html>
 					<head></head>
 					<body>
-					<ul>
+					<ul style='list-style-type:none;padding:0;margin:0 0 1em 0;'>
 						<li><strong>From:</strong> {$name}</li>
-						<li><strong>Phone:</strong> {$phone}</li>
 						<li><strong>Email:</strong> {$email}</li>
 					</ul>
 					<p>
