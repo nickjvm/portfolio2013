@@ -5,7 +5,7 @@ $(function() {
 	    var entry = "@nickjvm: " + feeds[0].text + " — " + moment(date).fromNow();
 
 	    $("#twitter .tweet").html(entry.parseURL().parseUsername().parseHashtag());
-	    $("#twitter").fadeIn();
+	    $("#twitter .tweet").fadeIn();
 	});
 
 	$('.email').magnificPopup({
