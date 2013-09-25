@@ -96,7 +96,12 @@ var contentTop = $(window).width() < 480 ? 150 : 360;
 window.onscroll = function() {
 	if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 		var n = Math.ceil($(window).scrollTop() / 2.5);
-		$("#hero").css("-webkit-transform", "translateY(-" + n + "px)");
+		$("#hero").css({
+			"-webkit-transform":"translateY(-" + n + "px)",
+			"-moz-transform":"translateY(-" + n + "px)",
+			"-ms-transform":"translateY(-" + n + "px)",
+			"transform":"translateY(-" + n + "px)"
+		});
 	} 
 	if($(window).scrollTop() > contentTop) {
 		$("header").addClass("shrink");
