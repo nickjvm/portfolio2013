@@ -1,13 +1,16 @@
 $(function() {
 	$(".front nav a").on("click",function(e) {
+		e.preventDefault();
+
 		if($(this).closest(".front").length) {
 			//front page stuff
-			e.preventDefault();
 			$.scrollTo($(this).attr("href"),300,{offset:-100});
 		}
 
 		var target = $(this).data("target");
 		_gaq.push(['_trackPageview', target]);
+		
+		window.location = $(this).attr("href");
 	})
 
 	$("footer a").on("click",function() {
