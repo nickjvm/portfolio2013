@@ -1,4 +1,16 @@
 $(function() {
+	$("nav a").on("click",function(e) {
+		e.preventDefault();
+		var target = $(this).data("target");
+		_gaq.push(['_trackPageview', target]);
+		$.scrollTo($(this).attr("href"),300,{offset:-100});
+	})
+
+	$("footer a").on("click",function() {
+		target = $(this).data("target");
+		_gaq.push(['_trackEvent', 'Social Media', 'Click', target]);
+	})
+
 
 	$.getJSON('get-tweets.php',function(feeds) {
 	    var date = parseTwitterDate(feeds[0].created_at);
@@ -43,6 +55,8 @@ $(function() {
 	});
 
 	$("#contact").on("submit",function(e) {
+		_gaq.push(['_trackPageview', "/sendmail"]);
+
 		if(!validator.valid()) { 
 			return false;
 		}

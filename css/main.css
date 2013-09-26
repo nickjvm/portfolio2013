@@ -327,6 +327,10 @@ header nav li a {
   padding: 20px 10px;
   cursor: pointer;
   color: #FFF;
+  text-decoration: none;
+}
+header nav li a:hover {
+  opacity: .7;
 }
 header nav li:last-child:after {
   display: none;
@@ -438,6 +442,51 @@ header + section {
 }
 #contentWrapper a:hover {
   text-decoration: underline;
+}
+#portfolio {
+  margin-top: 3em;
+}
+#portfolio aside img {
+  margin: auto;
+  display: block;
+  -moz-box-shadow: 0 1px 3px -1px #000000;
+  box-shadow: 0 1px 3px -1px #000000;
+}
+#portfolio h2 {
+  line-height: 1;
+  font-size: 30px;
+  font-family: league_gothic;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #666;
+}
+#portfolio article h3,
+#portfolio article h4 {
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+#portfolio article h3 {
+  margin-top: 1em;
+  line-height: 1;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: .5em;
+}
+#portfolio article p {
+  margin-top: 0;
+}
+#portfolio ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#portfolio ul li {
+  border: 1px solid #CCC;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.4);
+  margin-bottom: 3em;
 }
 #container {
   min-height: 100%;
@@ -723,6 +772,36 @@ form #buttons button[type=submit] {
   #contentWrapper #content {
     padding: 0 40px;
   }
+  #contentWrapper #portfolio aside {
+    display: inline-block;
+    width: 40%;
+    margin-right: 5%;
+  }
+  #contentWrapper #portfolio aside img {
+    max-width: 100%;
+  }
+  #contentWrapper #portfolio article {
+    display: inline-block;
+    width: 53%;
+    vertical-align: top;
+  }
+  #contentWrapper #portfolio article h3,
+  #contentWrapper #portfolio article h4 {
+    padding: 0;
+    margin: 0;
+  }
+  #contentWrapper #portfolio article h3 {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+  #contentWrapper #portfolio article p {
+    margin-top: 0;
+  }
+  #contentWrapper #portfolio ul li {
+    padding: 0;
+    background: transparent;
+    border-width: 0;
+  }
   #contentWrapper aside {
     display: inline-block;
     width: 49%;
@@ -794,6 +873,12 @@ form #buttons button[type=submit] {
   }
   #contentWrapper aside h3 {
     font-size: 40px;
+  }
+  #contentWrapper #portfolio aside {
+    width: 25%;
+  }
+  #contentWrapper #portfolio article {
+    width: 65%;
   }
 }
 @media (min-width: 999px) {
