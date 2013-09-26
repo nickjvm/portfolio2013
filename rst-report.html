@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nick VanMeter | Web Enthusiast</title>
+        <meta name="description" content="Web developer and User Experience consultant living and working in beautiful San Luis Obispo, California. I live, eat, sleep, and breathe Web.">
+        <meta name="keywords" content="Web Design, Nick, VanMeter, Van Meter, Web Development, Central, Iowa, Midwest, Ankeny, Des Moines, San Luis Obispo, California, Central Coast, Front-end web development, HTML5, CSS3, Responsive, Responsive Web Design, RWD">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-12653407-18']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+    </head>
+    <body class="not-front">
+        <div id="success"><strong>Your message has been sent!</strong></div>
+        <div id="container">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <header>
+                <section>
+                    <a id="logo" href="/">Nick VanMeter</a>
+                    <nav>
+                        <ul>
+                            <li><a href="/index.html#content" data-target="/about">ABOUT</a></li>
+                            <li><a href="/index.html#portfolio" data-target="/portfolio">PORTFOLIO</a></li>
+                            <li><a href="/index.html#talk" data-target="/talk">TALK</a></li>
+                        </ul></nav>
+                    
+                </section>
+     
+            </header>
+            <!-- Add your site or application content here -->
+            <div id="site">
+                
+                <div role="main-content" id="contentWrapper">
+                   <div id="content">
+                    <h1>Report: Replicated Strip Trial Application</h1>
+                    <h2>Persona</h2>
+
+                    <p>Tom Harvey is a 55-year-old corn and soybean farmer in Iowa. He loves his job, and would much rather be out in the fields than entering data on a computer. He cares greatly about the efficiency of his farm, and wants to easily know how his fields are performing.</p>
+
+                    <h2>Overview</h2>
+                    <img src="img/rst/sketch.png"/>
+                    <p>This project came as a new form as part of an existing reporting application. In sum, farmers document various aspects of their fields throughout the season, including variety of seed, different fertilizers used, irrigation habits, etc. Replicated Strip Trials, from what I understand, include using various combinations of fertilizers, placing techniques and timing techniques, and compare the field’s output at season’s end to see which combination yielded the best results. Each combination is called a “field treatment”</p>
+
+                    <h2>Considerations</h2>
+                    <img src="img/rst/docs.png"/>
+                    <p>The new form to be added to the application came to me on paper - three pages long. This is a very complex form with plenty of required and conditional fields. Considering the primary demographic - an older generation that doesn’t want to get bogged down with confusion and complexity - the form needed to be greatly simplified.</p>
+
+                    <h2>Process</h2>
+                    <img src="img/rst/breadcrumbs.png"/>
+                    <p>I started by identifying how the form could be split into related groups. I split the form into four steps, with breadcrumbs at the top to easily identify how far along you are in the process. Starting with personal information, which Tom will know best, and drilling down into more specific questions as he moves through the steps.</p>
+
+                    <h2>Cross-checking</h2>
+                    <img src="img/rst/validation.png"/>
+                    <p>Conditional field are hidden if it’s related field isn’t set, so Tom won’t even know it’s there. Less fields to complete equals a less overwhelming experience. To help with error handling, required fields are highlighted before Tom can continue to the next step. Before the final step is saved and submitted, there is another cross-check with the previous step to make sure the numbers all add up - this helps ensure accuracy and reduces errors from typos.</p>
+
+                    <h2>Comparing it all</h2>
+                    <img src="img/rst/compare.png"/>
+                    <p>Once Tom has entered and saved the data for each of his field treatments, he has the option to view a comparison report. The side-by-side report compares multiple aspects of each treatment, so Tom doesn’t have to do any of the thinking. One quick glance and he can get back out in the fields.</p>
+                    </div>
+                </div>
+            </div>
+            <footer id="talk">
+                <ul>
+                    <li>Lets Talk:</li>
+                    <li><a data-target="Facebook" href="https://facebook.com/nick.vanmeter" target="_blank"><i class="icon-facebook"></i></a></li>
+                    <li><a data-target="Twitter" href="https://twitter.com/nickjvm" target="_blank"><i class="icon-twitter"></i></a></li>
+                    <li><a data-target="LinkedIn" href="http://www.linkedin.com/in/nickvanmeter" target="_blank"><i class="icon-linkedin"></i></a></li>
+                    <li><a data-target="Email" class="email" href="#contact"><i class="icon-envelope"></i></a></li>
+                </ul>
+                <div id="twitter">
+                    <span class="tweet">Oops. Couldn't load Twitter feed.</span>
+                </div>
+            </footer>
+        </div>
+        <form id="contact" method="post" class="white-popup-block mfp-hide mfp-with-anim">
+            <div id="curtain"></div>
+            <h2>Give me a shout!</h2>
+            <span class="alert alert-error"></span>
+            <ul>
+                <li><label for="name">Name</label><input required name="name" id="name" type="text" placeholder="Name"/></li>
+                <li><label for="email">Email</label><input required name="email" id="email" type="email" placeholder="Email"/></li>
+                <li><label for="message">Message</label><textarea required name="message" id="message" placeholder="What's up?"></textarea></li>
+                <li>
+                    <ul id="buttons">
+                        <li><a href="#" class="cancel">cancel</a></li>
+                        <li><button type="submit">Send!</button><li>
+                    </ul>
+                </li>
+            </ul>
+        </form>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <script src="js/main.js"></script>
+
+       
+    </body>
+</html>

@@ -480,10 +480,34 @@ header + section {
         }
     }
 }
+h1, h2{
+    line-height:1;
+    font-family:league_gothic;
+    -webkit-font-smoothing:antialiased;
+    font-weight:normal;
+    text-transform:uppercase;
+    color:#666;
+}
+h1 {
+    font-size:40px;
+}
+h2 {
+    font-size:30px;
+}
+.front {
+    #contentWrapper {
+        margin-top: 270px;
+        border-top:4px solid #666;
+        
+    }
+}
+.not-front {
+    #contentWrapper {
+        margin-top:130px;
+    }
+}
 #contentWrapper {
-    margin-top: 270px;
     padding: 20px;
-    border-top:4px solid #666;
     position:relative;
     z-index:102;
     background:#E7E7E7;
@@ -496,6 +520,9 @@ header + section {
         box-sizing:border-box;
         line-height:1.6em;
         font-size:13px;
+        > img {
+            max-width:100%;
+        }
     }
     aside {
         h3 {
@@ -529,6 +556,8 @@ header + section {
             display:block;
             -moz-box-shadow:0 1px 3px -1px #000;
             box-shadow:0 1px 3px -1px #000;
+            width:100%;
+            max-width:100%;
         }
     }
     h2 {
@@ -838,9 +867,10 @@ form {
         }
     }
 
-    #contentWrapper {
-        margin-top:370px;
-
+    .front {
+        #contentWrapper {
+            margin-top:370px;
+        }
     }
 
     
@@ -885,9 +915,18 @@ form {
                 margin:1em 0 1em 20px;
             }
         }
-    }   
+    } 
+    .front {
+        #contentWrapper {
+            margin-top:320px;
+        }
+    } 
+    .not-front {
+        #contentWrapper {
+            margin-top:100px;
+        }
+    }
     #contentWrapper {
-        margin-top:320px;
         #content {
             padding:0 40px;
         }
@@ -1004,8 +1043,12 @@ form {
             }
         }
     }
+    .front {
+        #contentWrapper {
+            margin-top:470px;
+        }
+    }
     #contentWrapper {
-        margin-top:470px;
         aside {
             h3 {
                 font-size:40px;
@@ -1067,8 +1110,15 @@ form {
     #hero {
         top:140px;
     }
-    #contentWrapper {
-        margin-top:530px;
+    .front {
+        #contentWrapper {
+            margin-top:530px;
+        }
+    }
+    .not-front {
+        #contentWrapper {
+            margin-top:160px;
+        }
     }
 }
 @-webkit-keyframes rollin_micro {

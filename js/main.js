@@ -1,5 +1,5 @@
 $(function() {
-	$("nav a").on("click",function(e) {
+	$(".front nav a").on("click",function(e) {
 		e.preventDefault();
 		var target = $(this).data("target");
 		_gaq.push(['_trackPageview', target]);

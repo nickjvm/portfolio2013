@@ -405,10 +405,30 @@ header + section {
 #hero aside li.active {
   color: #ffffff;
 }
-#contentWrapper {
+h1,
+h2 {
+  line-height: 1;
+  font-family: league_gothic;
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #666;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+.front #contentWrapper {
   margin-top: 270px;
-  padding: 20px;
   border-top: 4px solid #666;
+}
+.not-front #contentWrapper {
+  margin-top: 130px;
+}
+#contentWrapper {
+  padding: 20px;
   position: relative;
   z-index: 102;
   background: #E7E7E7;
@@ -422,6 +442,9 @@ header + section {
   box-sizing: border-box;
   line-height: 1.6em;
   font-size: 13px;
+}
+#contentWrapper #content > img {
+  max-width: 100%;
 }
 #contentWrapper aside h3 {
   margin-top: 0;
@@ -451,6 +474,8 @@ header + section {
   display: block;
   -moz-box-shadow: 0 1px 3px -1px #000000;
   box-shadow: 0 1px 3px -1px #000000;
+  width: 100%;
+  max-width: 100%;
 }
 #portfolio h2 {
   line-height: 1;
@@ -730,7 +755,7 @@ form #buttons button[type=submit] {
   #hero ul li {
     line-height: 40px;
   }
-  #contentWrapper {
+  .front #contentWrapper {
     margin-top: 370px;
   }
   #site {
@@ -766,8 +791,11 @@ form #buttons button[type=submit] {
   header.shrink #logo {
     margin: 1em 0 1em 20px;
   }
-  #contentWrapper {
+  .front #contentWrapper {
     margin-top: 320px;
+  }
+  .not-front #contentWrapper {
+    margin-top: 100px;
   }
   #contentWrapper #content {
     padding: 0 40px;
@@ -868,7 +896,7 @@ form #buttons button[type=submit] {
   #hero aside li.active {
     color: #ffffff;
   }
-  #contentWrapper {
+  .front #contentWrapper {
     margin-top: 470px;
   }
   #contentWrapper aside h3 {
@@ -911,8 +939,11 @@ form #buttons button[type=submit] {
   #hero {
     top: 140px;
   }
-  #contentWrapper {
+  .front #contentWrapper {
     margin-top: 530px;
+  }
+  .not-front #contentWrapper {
+    margin-top: 160px;
   }
 }
 @-webkit-keyframes rollin_micro {
