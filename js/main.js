@@ -1,15 +1,20 @@
 $(function() {
-	$(".front nav a").on("click",function(e) {
+	$("nav a").on("click",function(e) {
+		var self = this;
 		e.preventDefault();
 
-		var target = $(this).data("target");
+		var target = $(self).data("target");
 		_gaq.push(['_trackPageview', target]);
-		
-		if($(this).closest(".front").length) {
+
+		if($(self).closest(".front").length) {
 			//front page stuff
-			$.scrollTo($(this).attr("href"),300,{offset:-100});
+			$.scrollTo($(self).attr("href"),300,{offset:-100});
 		} else {
-			window.location = $(this).attr("href");
+			//give 100 milliseconds for the ga queue to update.
+			setTimeout(function() {
+				window.location = $(self).attr("href");	
+			},100);
+			
 		}
 
 
