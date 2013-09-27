@@ -18,7 +18,7 @@ $(function() {
 		}
 
 
-	})
+	});
 
 	$("footer a").on("click",function() {
 		target = $(this).data("target");
@@ -116,12 +116,34 @@ $(function() {
 		});
 
 	});
+
+	var egg = function() {
+		$.magnificPopup.open({
+			type: 'iframe',
+			mainClass:"mfp-zoom-in",
+			removalDelay: 300,
+			preloader: false,
+			items: {
+				src:'http://www.youtube.com/watch?v=xDMNHvnIxic'
+			}
+		});
+
+		_gaq.push(['_trackEvent', 'Easter Egg', 'Keyed']);
+
+	}
+
+	var easter_egg = new Konami();
+	easter_egg.code = function() { egg() }
+	easter_egg.load();
+
 });
+
 var clearForm = function(selector) {
 	$(selector).find(":input").val("").prop("checked",false);
 }
 
 var contentTop = $("#content").offset().top - $("header").outerHeight();
+
 window.onscroll = function() {
 	if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 		var n = Math.ceil($(window).scrollTop() / 2.5);
@@ -150,13 +172,15 @@ String.prototype.parseURL = function() {
 		return url.link(url);
 	});
 };
-    String.prototype.parseUsername = function() {
+
+String.prototype.parseUsername = function() {
 	return this.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
 		var username = u.replace("@","")
 		return u.link("http://twitter.com/"+username);
 	});
 };
-    String.prototype.parseHashtag = function() {
+
+String.prototype.parseHashtag = function() {
 	return this.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
 		var tag = t.replace("#","%23")
 		return t.link("http://search.twitter.com/search?q="+tag);
