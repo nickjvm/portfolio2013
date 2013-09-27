@@ -154,6 +154,8 @@ window.onscroll = function() {
 			"transform":"translateY(-" + n + "px)"
 		});
 	} 
+	var contentTop = $("#content").offset().top - $("header").outerHeight();
+
 	if($(window).scrollTop() > contentTop) {
 		$("header").addClass("shrink");
 	} else {
