@@ -142,8 +142,6 @@ var clearForm = function(selector) {
 	$(selector).find(":input").val("").prop("checked",false);
 }
 
-var contentTop = $("#content").offset().top - $("header").outerHeight();
-
 window.onscroll = function() {
 	if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 		var n = Math.ceil($(window).scrollTop() / 2.5);
