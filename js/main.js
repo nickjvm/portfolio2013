@@ -141,6 +141,12 @@ $(function() {
 var clearForm = function(selector) {
 	$(selector).find(":input").val("").prop("checked",false);
 }
+var headerHeight = $("header:first").outerHeight();
+
+$(window).on("resize",function() {
+	//update header hight based on new window width
+	headerHeight = $("header:first").outerHeight();
+})
 
 window.onscroll = function() {
 	if(!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
@@ -152,7 +158,7 @@ window.onscroll = function() {
 			"transform":"translateY(-" + n + "px)"
 		});
 	} 
-	var contentTop = $("#content").offset().top - $("header").outerHeight();
+	var contentTop = $("#content").offset().top - headerHeight;
 
 	if($(window).scrollTop() > contentTop) {
 		$("header").addClass("shrink");
