@@ -427,6 +427,9 @@ h2 {
 .not-front #contentWrapper {
   margin-top: 130px;
 }
+.error-404 #contentWrapper {
+  display: none;
+}
 #contentWrapper {
   padding: 20px;
   position: relative;
