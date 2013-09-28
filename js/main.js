@@ -128,7 +128,7 @@ $(function() {
 			}
 		});
 
-		_gaq.push(['_trackEvent', 'Easter Egg', 'Keyed']);
+		_gaq.push(['_trackEvent', 'Easter Egg', 'Keyed', "Found Easter Egg!"]);
 
 	}
 
