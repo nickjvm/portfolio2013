@@ -13,8 +13,11 @@ if(isset($_POST['email'])) {
 		array_push($errors,"email");
 	}
 }
-
-if(count($errors) > 0 || !isset($_POST)) {
+if(count($_POST) == 0) {
+	print_r(json_encode(array("status"=>false,"code"=>2)));
+	return false;
+}
+if(count($errors) > 0) {
 	print_r(json_encode(array("status"=>false,"code"=>1,"errors"=>$errors)));
 } else { 
 		$name = trim(strip_tags($_POST['name']));
