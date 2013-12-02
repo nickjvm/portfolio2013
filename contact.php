@@ -14,7 +14,7 @@ if(isset($_POST['email'])) {
 	}
 }
 
-if(count($errors) > 0) {
+if(count($errors) > 0 || !isset($_POST)) {
 	print_r(json_encode(array("status"=>false,"code"=>1,"errors"=>$errors)));
 } else { 
 		$name = trim(strip_tags($_POST['name']));
